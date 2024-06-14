@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.a{
+    background-color: blue;
+    color: white;
+    width: 344px;
+    height: 50px;
+}
+.main
+{
+    color: red;
+    width: 344px;
+}
+.bg
+{
+    width: 344px;
+    height: 344px;
+    background-image: url(prague-conference-center-1056491.jpg);
+    background-repeat: no-repeat;
+    background-color: blue;
+    background-size: 300px,300px;
+}

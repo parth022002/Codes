@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: goldenrod;
+}
+.a
+{
+background-color:brown;
+color: white;
+}
+.b{
+background-color: blue;
+color: black;
+}

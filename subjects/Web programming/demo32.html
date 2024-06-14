@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript"> 
+    function doit(){
+        document.images.slide.height=400;
+        document.images.slide.width=400;
+        document.images.slide.border=40;
+    }
+
+    function doneit(){
+        document.images.slide.height=200;
+        document.images.slide.width=200;
+        document.images.slide.border=40;
+    }
+    </script>
+
+    <img src="Images/img4.jpg" height="200px" width="200px" border="10" name="slide" onmouseover="doit()" onmouseout="doneit()">
+</body>
+</html>

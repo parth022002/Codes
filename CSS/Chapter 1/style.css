@@ -1,0 +1,15 @@
+body{
+        background-color: black;
+        color: white;
+    }
+    #first{
+        background-color: red;  
+    }
+    #second{
+        background-color: aqua;
+        color: black;
+    }
+    .b{
+        background-color: blue;
+        color: black;
+    }

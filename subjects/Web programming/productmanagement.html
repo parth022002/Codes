@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style type="text/css">
+    #rt {
+        border-radius: 5px;
+        border: solid grey;
+    }
+    #r1 {
+        border-radius: 3px;
+        border: solid grey 2px;
+    
+    }
+    body {
+        background-image: url("g1.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .navbar{
+    display: flex;
+    align-items: center;
+    
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+nav ul li input{
+    border-bottom: black ;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: darkblue;
+}
+p{
+    color: black;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: radial-gradient(#fff,#2998e8);
+    background-size: cover;
+    width: 1400px;
+    padding-left: 15px;
+}
+.btn{
+    background: transparent;
+    border: none;
+}
+.btn:hover{
+    color: darkblue;
+}
+</style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="Images/logo.png" alt="logo" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li><input type="text" placeholder="Search"></li>
+                    <li><a href="" >Home</a></li>
+                    <li><a href="" >Products</a></li>
+                    <li><a href="" >About Us</a></li>
+                    <li><a href="" >Contact</a></li>
+                    <li><a href="" >Account</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="btn"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+             <h2 style="padding: 0px;"> Products </h2>
+                                    <table>
+                                        <td>
+                                            <select name="category" style="height:50px ;width: 400px; background-color: white; border-radius: 25px;">
+                                                <option value="category1">Select Category</option>
+                                                <option value="laptop">Laptop</option>
+                                                <option value="desktop">Desktop</option>
+                                            </select>
+                                        </td>
+                                    </table>
+                                </td>
+                            </table>
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                            <table id="r1" style="border-color: transparent;"><td>
+                                <table border="1" style="margin-top: 10PX;" cellspacing="0">
+                                
+                                <tr align="center">
+                                    <td style="width: 170px;"><h3>Image</h3></td>
+                                    <td style="width: 170px;"><h3>Name</h3></td>
+                                    <td style="width: 120px;"><h3>Category</h3></td>
+                                    <td style="width: 600px;"><h3>Description</h3></td>
+                                    <td style="width: 140px;"><h3>Price</h3></td>
+                                    <td style="width: 200px;"><h3>Action</h3></td>
+                                </tr>
+                                <tr align="center">
+                                    <td align="center"><img src="images/img1.png" height="150px" width="150px"></td>
+                                    <td align="center"><p>Apple Mac Book</p> </td>
+                                    <td align="center">Professional</td>
+                                    <td align="center" >Mac Book QHD+ IPS AntiGlare Display Intel Core i5-11300H 11th Gen 14 inch(35.56 cm) Thin & Light Laptop(8GB/512GB SSD/Iris Xe Graphics/Windows 11/MS Office<br> 21/Backlight KB/FP Sensor/1.4 Kg)</td>
+                                    <td align="center">₹1,51,499</td>
+                                    <td align="center">
+                                        <input type="submit" value="Add Product" style="height: 50px;width: 150px; background-color: #f64749; border-radius: 25px; margin:5px ;"><br>
+                                        <input type="submit" value="Remove Product" style="height: 50px;width: 150px;background-color: #256eff; border-radius: 25px;">
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td align="center"><img src="images/img9.png" height="150px" width="150px"></td>
+                                    <td align="center">Acer Aspire 5</td>
+                                    <td align="center">Creators</td>
+                                    <td align="center">Acer Aspire 5 12th Gen Intel Core i5<br> (16 GB RAM/512 GB SSD/Windows
+                                        11 Home/MS <br>Office 2021/ Fingerprint Reader/Backlit <br>Keyboard/Safari
+                                        Gold/ 1.76 KG/ A515-57,<br>Flat Rs: 2000 of All Bank Cards).</td>
+                                    <td align="center">₹61,990</td>
+                                    <td align="center">
+                                        <input type="submit" value="Add Product" style="height: 50px;width: 150px;background-color: #f64749; border-radius: 25px; margin:5px ;"><br>
+                                        <input type="submit" value="Remove Product" style="height: 50px;width: 150px;background-color: #256eff;;border-radius: 25px;">
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td align="center"><img src="images/img7.png" height="150px" width="150px"></td>
+                                    <td align="center">legion</td>
+                                    <td align="center">Gaming</td>
+                                    <td align="center">HP Victus Gaming Latest AMD Ryzen 5 5600H Processor 16.1 inch<BR>(40.9
+                                        cm) FHD Gaming Laptop (8GB RAM/512GB SSD/4GB Radeon RX5500M
+                                        Graphics/B&O/Backlit)</td>
+                                    <td align="center">₹81,990</td>
+                                    <td align="center">
+                                        <input type="submit" value="Add Product" style="height: 50px;width: 150px;background-color: #f64749;;border-radius: 25px; margin:5px ; "><br>
+                                        <input type="submit" value="Remove Product" style="height: 50px;width: 150px;background-color: #256eff;border-radius: 25px;">
+                                    </td>
+                                </tr>
+                                </table>
+                            </td>
+                            </table>
+                            <table align="right" style="padding: 5px;">
+                                <td><input type="submit"  value="Add Product" style="height: 50px;width: 300px; background-color: white; border-radius: 25px;">
+                                </td>
+                            </table>
+</body>
+
+</html>

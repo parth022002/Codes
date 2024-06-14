@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "393833197863",
+    "project_id": "marwadifirebase",
+    "storage_bucket": "marwadifirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393833197863:android:df6de5978d10f88afd7902",
+        "android_client_info": {
+          "package_name": "com.example.practical11firebasecuirdoperation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7zn-4E639lZGVv8L3-epY2QamqUlgeMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

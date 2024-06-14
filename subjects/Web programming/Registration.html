@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Registration.css" />
+    <title>registration</title>
+  </head>
+  <body>
+    <div class="login">
+      <div class="main">
+        <h2>Registration</h2>
+        <form action="login.html" autocomplete="on" method="post" onSubmit="return validate(this);" name="form">
+          <div class="Input">
+            <input type="text" required id="fn"/>
+            <label for="fname">First Name</label>
+            <span id="msg1" class="msg"></span>
+          </div>
+          <div class="Input">
+            <input type="text" required id="ln"/>
+            <label for="lname">Last Name</label>
+            <span id="msg2" class="msg"></span>
+          </div>
+          <div class="Input">
+            <input type="text" required id="email" />
+            <label for="uname">Email</label>
+            <span id="msg3" class="msg"></span>
+          </div>
+          <div class="Input">
+            <input type="password" required id="pass"/>
+            <label for="password">Password</label>
+            <span id="msg4" class="msg"></span>
+          </div>
+          <div class="Input">
+            <input type="password" required id="cpass" />
+            <label for="password">Confirm Password</label>
+            <span id="msg5" class="msg"></span>
+          </div>
+          <div class="remember">
+            <label for="password"> 
+            <input type="checkbox" required/>I agree to the terms & conditions
+            </label>
+          </div>
+          <button type="submit" class="button">Register</button>
+          <div class="registration">
+            <p>
+              Already have an account.
+              <a href="login.html" class="registration">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      var ck_fn = /^[A-Z,a-z,0-9]{3,20}$/;
+      var ck_ln = /^[A-Z,a-z,0-9]{3,20}$/;
+      var ck_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{5,30}$/;
+      var ck_pass = /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+      var ck_cpass =/^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+               
+
+      function validate(form) {
+        var fn = form.fn.value;
+        var ln = form.ln.value;
+        var email = form.email.value;
+        var pass = form.pass.value;
+        var cpass = form.cpass.value;
+        
+        var errors = [];
+
+        if (!ck_fn.test(fn)) {
+          document.getElementById("msg1").innerHTML ="*Please enter proper name";
+        }
+        if (!ck_ln.test(ln)){
+          document.getElementById("msg2").innerHTML ="*Please enter proper name";
+        }
+        if (!ck_email.test(email)){
+            document.getElementById("msg3").innerHTML ="*Please enter valid email";
+        }
+        if(!ck_pass.test(pass)){
+           document.getElementById("msg4").innerHTML ="please enter the password of min 6 char";
+        }
+        if(!ck_cpass.test(cpass)){
+          document.getElementById("msg5").innerHTML = "Please enter same password";
+        }
+
+        return false;
+        
+        }
+    </script>
+  </body>
+</html>

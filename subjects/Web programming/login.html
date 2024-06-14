@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="login">
+      <div class="form">
+        <h2>Login</h2>
+        <form action="Homepage.html" autocomplete="on" method="post" onSubmit="return validate(this);" name="form" >
+          <div class="Input">
+            <input type="text" required id="email"/>
+            <label for="uname">Email</label>
+            <span id="msg1" class="msg"></span>
+          </div>
+          <div class="Input">
+            <input type="password" required id="pass"/>
+            <label for="password">Password</label>
+            <span id="msg2" class="msg"></span>
+          </div>
+          <div class="remember">
+            <label for="password"><input type="checkbox" required />Remember me</label>
+            <a href="#" id="Forget">Forget Password</a>
+          </div>
+          <button type="submit" class="button">Login</button>
+          <div class="registration">
+            <p>
+              Don't have an account.
+              <a href="Registration.html" class="registration">Register here</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+       var ck_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{5,30}$/;
+       var ck_pass = /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+
+       function validate(form){
+        var email = form.email.value;
+        var pass = form.pass.value;
+
+        var errors = [];
+        
+        if (!ck_email.test(email)) {
+            document.getElementById("msg1").innerHTML ="* You must enter a valid email address!";
+        }
+        if (!ck_pass.test(pass)){
+            document.getElementById("msg2").innerHTML ="*Enter Correct password";
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>

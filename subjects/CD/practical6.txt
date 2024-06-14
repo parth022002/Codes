@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+// Function to check if a character is a terminal (uppercase letter)
+int isTerminal(char symbol)
+{
+    return isupper(symbol);
+}
+/
+    / Function to add a symbol to the FIRST set void addToFirst(char first[], char symbol)
+{
+    int i;
+    // Check if the symbol is not already in the FIRST set
+    for (i = 0; first[i] != '\0'; ++i)
+    {
+        if (first[i] == symbol)
+        {
+            return;
+        }
+    }
+    // Add the symbol to the FIRST set
+    first[i] = symbol;
+    first[i + 1] = '\0';
+}
+// Function to find the FIRST set for a given grammar
+void findFirst(char first[], char production[][10], char nonTerminal)
+{
+    int i, j;
+    for (i = 0; production[i][0] != '\0'; ++i)
+    {
+        // Check if the production rule starts with the given non-terminal
+        if (production[i][0] == nonTerminal)
+        {
+            // If the next symbol is a terminal, add it to the FIRST set
+            if (isTerminal(production[i][2]))
+            {
+                addToFirst(first, production[i][2]);
+            }
+            // If the next symbol is a non-terminal, recursively find its FIRST set
+            else
+            {
+                findFirst(first, production, production[i][2]);
+            }
+        }
+    }
+}
+int main()
+{
+    int numProductions;
+    printf("Enter the number of productions: ");
+    scanf("%d", &numProductions);
+    // Dynamically allocate memory for production rules
+    char(*production)[10] = malloc(numProductions * sizeof(char[10]));
+    // Input production rules from the user
+    for (int i = 0; i < numProductions; ++i)
+    {
+        printf("Enter production %d: ", i + 1);
+        scanf("%s", production[i]);
+    }
+    char nonTerminal;
+    printf("Enter the non-terminal to find FIRST set for: ");
+    scanf(" %c", &nonTerminal);
+    char first[20] = "";
+    // Find the FIRST set for the given non-terminal
+    findFirst(first, production, nonTerminal);
+    // Display the FIRST set
+    printf("FIRST(%c): {%s}\n", nonTerminal, first);
+    // Free dynamically allocated memory
+    free(production);
+    return 0;
+}

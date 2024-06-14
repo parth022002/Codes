@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function swapIt()
+        {
+            var a= document.images[0].src;
+            document.images[0].src=document.images[1].src;
+            document.images[1].src=a;
+        }
+    </script>
+    <img src="Images/img1.png" height="200" width="200" border="10"/>
+    <img src="Images/img2.png" height="200" width="200" border="10"/><br/>
+    <input type="button" value="Swap Images" onclick="swapIt()"/>
+</body>
+</html>
