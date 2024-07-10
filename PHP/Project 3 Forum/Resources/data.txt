@@ -1,3 +1,1 @@
-username: id22417104_admin
-pass: Parth@2002
-dbname:id22417104_forum
+Link - myforum.42web.io
