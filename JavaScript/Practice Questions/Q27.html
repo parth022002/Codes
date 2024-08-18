@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+    <link rel="stylesheet" href="Q27.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bookmark Manager</h1>
+
+        <div class="form-container">
+            <input type="text" id="siteName" placeholder="Enter site name" required>
+            <input type="url" id="siteUrl" placeholder="Enter site URL (e.g., https://www.example.com)" required>
+            <button onclick="addBookmark()">Add Bookmark</button>
+        </div>
+
+        <div id="bookmarksList">
+            <h2>Your Bookmarks</h2>
+            <ul id="bookmarks"></ul>
+        </div>
+    </div>
+
+    <script src="Q27.js"></script>
+</body>
+</html>
