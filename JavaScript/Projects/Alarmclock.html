@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="Alarmclock.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Alarm Clock</h1>
+        <div id="clock" class="clock"></div>
+        <div class="set-alarm">
+            <input type="time" id="alarmTime" class="time-input" required>
+            <button id="setAlarmBtn" class="btn">Set Alarm</button>
+        </div>
+        <button id="stopAlarmBtn" class="btn stop-btn" style="display: none;">Stop Alarm</button>
+        <audio id="alarmSound">
+            <source src="alarm.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script src="Alarmclock.js"></script>
+</body>
+</html>
